@@ -84,11 +84,13 @@ async function handleSubmit() {
   try {
     if (form.value.id) {
       const { id, created_by, created_at, updated_at, ...payload } = form.value
+	  payload.code = payload.code?.trim() ? payload.code.trim() : null
       const { error } = await supabase.from('customers').update(payload).eq('id', id)
       if (error) throw error
       ElMessage.success('更新成功')
     } else {
       const { id, ...payload } = form.value
+	  payload.code = payload.code?.trim() ? payload.code.trim() : null
       const { error } = await supabase.from('customers').insert(payload)
       if (error) throw error
       ElMessage.success('新增成功')
