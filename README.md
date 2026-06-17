@@ -1,5 +1,7 @@
 # ERP 管理系统（Vue3 + Supabase）
 
+vercel部署访问地址: https://erp-management-system-pink.vercel.app/
+
 一个基于 **Vue3（组合式 API）+ Element Plus + Pinia + Vue Router + Supabase** 的轻量级 ERP 管理系统，
 涵盖登录注册、客户管理、供应商管理、商品管理、采购管理、销售管理、库存管理、报表系统。
 
